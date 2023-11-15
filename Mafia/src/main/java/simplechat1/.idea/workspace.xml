@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="089f7bed-ca7d-420f-9e2f-ae8790f81cdf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/GameLogic/Logic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/GameLogic/MafiaGame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/Players/Character.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/Players/Citezen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/Players/Doctor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/Players/Killer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/Players/MafiaBoss.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/Players/Police.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/Players/Robot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/Players/Thief.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/org/gui/InGameGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/org/gui/Lobby.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/org/gui/custom/CustomButton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/resources/Finger Printed.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/resources/Night Stalker Free.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/resources/Night Stalker Free.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/resources/Romanum Est.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/resources/atwriter.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/Finger Printed.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/Night Stalker Free.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/Night Stalker Free.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/Romanum Est.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/atwriter.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/org/gui/InGameGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/org/gui/InGameGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/org/gui/Lobby$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/org/gui/Lobby$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/org/gui/Lobby.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/org/gui/custom/CustomButton.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/client/ChatClient.class" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ocsf/server/AbstractServer.class" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2WW1VHxqCQHCMn1AqtXPVSxD93g" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/freez/OneDrive/Desktop/POLI STUFF/Semestrul 2/IS proiect/Mafia/simplechat1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\freez\OneDrive\Desktop\POLI STUFF\Semestrul 2\IS\compiled\simplechat1" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ServerConsole" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ServerConsole" />
+      <module name="simplechat1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="089f7bed-ca7d-420f-9e2f-ae8790f81cdf" name="Changes" comment="" />
+      <created>1696833544643</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696833544643</updated>
+      <workItem from="1696833546207" duration="225000" />
+      <workItem from="1697433064144" duration="5778000" />
+      <workItem from="1698037829388" duration="2543000" />
+      <workItem from="1698041053237" duration="2376000" />
+      <workItem from="1698645804519" duration="517000" />
+      <workItem from="1698646341562" duration="4302000" />
+      <workItem from="1699030071046" duration="4901000" />
+      <workItem from="1699035553255" duration="126000" />
+      <workItem from="1699035737310" duration="145000" />
+      <workItem from="1699215602366" duration="8000" />
+      <workItem from="1699250328671" duration="89000" />
+      <workItem from="1699250975567" duration="139000" />
+      <workItem from="1700040821855" duration="18000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
