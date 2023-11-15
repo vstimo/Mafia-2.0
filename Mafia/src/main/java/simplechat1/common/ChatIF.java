@@ -1,4 +1,4 @@
-package common;
+package simplechat1.common;
 
 public interface ChatIF 
 {

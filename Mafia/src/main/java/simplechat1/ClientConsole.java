@@ -1,6 +1,9 @@
+package simplechat1;
+
+import simplechat1.client.*;
+import simplechat1.common.*;
+
 import java.io.*;
-import client.*;
-import common.*;
 
 public class ClientConsole implements ChatIF
 {

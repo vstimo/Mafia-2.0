@@ -1,5 +1,8 @@
+package simplechat1;
+
 import java.io.*;
-import common.*;
+import gui.InGameGUI;
+import simplechat1.common.*;
 
 public class ServerConsole implements ChatIF
 {
@@ -9,6 +12,7 @@ public class ServerConsole implements ChatIF
     public ServerConsole(int port)
     {
         server= new EchoServer(port, this);
+        //new InGameGUI();
         try
         {
             server.listen(); //Start listening for connections

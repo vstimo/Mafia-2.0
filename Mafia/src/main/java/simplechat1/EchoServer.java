@@ -1,5 +1,7 @@
-import common.ChatIF;
-import ocsf.server.*;
+package simplechat1;
+
+import simplechat1.common.*;
+import simplechat1.ocsf.server.*;
 
 import java.io.IOException;
 

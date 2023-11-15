@@ -1,7 +1,8 @@
-package client;
+package simplechat1.client;
 
-import ocsf.client.*;
-import common.*;
+import simplechat1.common.*;
+import simplechat1.ocsf.client.*;
+
 import java.io.*;
 
 public class ChatClient extends AbstractClient {
