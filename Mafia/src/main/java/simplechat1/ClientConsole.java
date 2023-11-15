@@ -58,7 +58,7 @@ public class ClientConsole implements ChatIF
     }
     catch(ArrayIndexOutOfBoundsException e)
     {
-      host = "localhost";
+      host = "DESKTOP-UBEGP30";
     }
     try{
       port=Integer.parseInt(args[1]);
