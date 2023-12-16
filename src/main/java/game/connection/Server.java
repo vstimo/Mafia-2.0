@@ -21,8 +21,6 @@ public class Server {
 
                 Thread thread = new Thread(clientHandler);
                 thread.start();
-
-//ceasdadsasd
             }
         } catch (IOException e) {
             System.out.println("S-a intrerupt conexiunea catre server");
@@ -41,7 +39,7 @@ public class Server {
     }
 
     public static void main(String[] args) throws IOException {
-        ServerSocket serverSocket = new ServerSocket(2809);
+        ServerSocket serverSocket = new ServerSocket(1234);
         Server server = new Server(serverSocket);
         server.startServer();
     }

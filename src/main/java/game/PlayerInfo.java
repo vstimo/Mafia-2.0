@@ -2,10 +2,11 @@ package game;
 
 public class PlayerInfo {
     public String username;
-    public boolean ready = false;
+    public boolean ready;
 
     public PlayerInfo(String username) {
         this.username = username;
+        this.ready=false;
     }
 
     public String getUsername() {

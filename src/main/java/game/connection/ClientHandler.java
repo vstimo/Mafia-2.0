@@ -1,5 +1,7 @@
 package game.connection;
 
+import game.PlayerInfo;
+
 import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -19,24 +21,22 @@ public class ClientHandler implements Runnable {
             this.bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             if (clientUsername.equals("")) this.clientUsername = bufferedReader.readLine();
             clientHandlers.add(this);
-            getListOfPlayers();
             broadCastMessage("SERVER: " + clientUsername + " has entered the chat!");
         } catch (IOException e) {
             closeEverything(socket, bufferedReader, bufferedWriter);
         }
     }
 
-    public ArrayList<String> getListOfPlayers() {
-        ArrayList<String> playerList = new ArrayList<String>();
-        for (int i = 0; i < clientHandlers.size(); i++)
-            playerList.add(clientHandlers.get(i).clientUsername);
+    public ArrayList<PlayerInfo> getListOfPlayers() {
+        ArrayList<PlayerInfo> playerList = new ArrayList<>();
+        for(ClientHandler c: clientHandlers)
+            playerList.add(new PlayerInfo(c.clientUsername));
         return playerList;
     }
 
     @Override
     public void run() {
         String messageFromClient;
-
         while (socket.isConnected()) {
             try {
                 messageFromClient = bufferedReader.readLine();
@@ -52,7 +52,14 @@ public class ClientHandler implements Runnable {
         for (ClientHandler clientHandler : clientHandlers) {
             try {
                 if (getListOfPlayers().size() != 0) {
-                    clientHandler.bufferedWriter.write(getListOfPlayers().toString());
+                    StringBuilder stringPlayerList = new StringBuilder();
+                    ArrayList<PlayerInfo> auxList = getListOfPlayers();
+                    for (int i = 0; i < auxList.size(); i++){
+                        stringPlayerList.append("[").append(auxList.get(i).getUsername()).append(",").append(auxList.get(i).isReady()).append("]");
+                        if (i!= auxList.size()-1)
+                            stringPlayerList.append(",");
+                    }
+                    clientHandler.bufferedWriter.write(stringPlayerList.toString());
                     clientHandler.bufferedWriter.newLine();
                     clientHandler.bufferedWriter.flush();
                 }

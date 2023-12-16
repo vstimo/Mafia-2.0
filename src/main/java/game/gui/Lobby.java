@@ -10,22 +10,25 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Lobby extends JFrame {
     private static final Color KAKI = new Color(174, 194, 198);
     private List<PlayerInfo> playersList = new ArrayList<>();
     private JLabel[] playerListLabel = new JLabel[16];
-    public CustomButton submitButton, readyButton, refreshButton;
+    public CustomButton submitButton, readyButton;
     private JTextField nameField;
     private String playerName = "";
     public Client client;
+
     public Lobby(Client client) {
-        this.client=client;
+        this.client = client;
         generateGraphicalInterface();
         buttonsManage();
     }
 
-    private void generateGraphicalInterface(){
+    private void generateGraphicalInterface() {
         getContentPane().setBackground(KAKI);
         setTitle("Mafia");
         setSize(600, 720);
@@ -64,11 +67,9 @@ public class Lobby extends JFrame {
 
         submitButton = new CustomButton("Submit", new Color(227, 221, 211), Color.DARK_GRAY);
         readyButton = new CustomButton("Ready", new Color(37, 43, 53), Color.WHITE);
-        refreshButton = new CustomButton("Refresh", Color.BLACK, Color.WHITE);
 
         leftPanel.add(submitButton);
         leftPanel.add(readyButton);
-        leftPanel.add(refreshButton);
         leftPanel.setPreferredSize(new Dimension(250, 150));
 
         /*
@@ -88,10 +89,9 @@ public class Lobby extends JFrame {
         for (int i = 0; i < 16; i++) { //initialize array of labels that contains the names of players and then get the player's names
             playerListLabel[i] = new JLabel();
             playerListLabel[i].setFont(new Font("Another Typewriter", Font.PLAIN, 20));
-            playerListLabel[i].setText(" " + i);
+            playerListLabel[i].setText(" ");
             rightPanel.add(playerListLabel[i]);
         }
-        getListOfPlayers();
         rightPanel.setBackground(KAKI);
 
         add(leftPanel, BorderLayout.WEST);
@@ -100,20 +100,15 @@ public class Lobby extends JFrame {
     }
 
     private void buttonsManage() {
-        submitButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                playerName = nameField.getText();
-                client.setUsername(playerName);
-                submitButton.setEnabled(false);
-                /*
-                Aici voi avea o metoda gen sendToServer(playerList);
-                Asta e o metoda care trimite la server lista de jucatori impreuna cu statusul acestora
-                 */
-            }
+        submitButton.addActionListener(e -> {
+            playerName = nameField.getText();
+            client.setUsername(playerName);
+            submitButton.setEnabled(false);
+            client.sendMessage(playerName);
         });
 
         readyButton.addActionListener(new ActionListener() {
+            //client
             boolean ready = false;
 
             @Override
@@ -130,28 +125,46 @@ public class Lobby extends JFrame {
                 }
             }
         });
-
-        refreshButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                client.listenForMessage();
-            }
-        });
     }
 
     private void getListOfPlayers() {
-        /*
-        Aici voi avea o metoda getFromServer() unde mi se va returna playerList care inseamna
-        cate un client-player
-         */
-        playersList = new ArrayList<>(); //asta va veni din metoda de mai sus
+        playersList = new ArrayList<>();
+        String regex = "\\[([^,]+),(true|false)]";
+        Pattern pattern = Pattern.compile(regex);
+        String auxList = client.getPlayerList();
+        System.out.println(auxList);
+        Matcher matcher = null;
+        if (auxList != null) matcher = pattern.matcher(auxList);
+        if (matcher == null) return;
+        while (matcher.find()) {
+            String username = matcher.group(1);
+            playersList.add(new PlayerInfo(username));
+        }
+        int contor = 0;
         for (PlayerInfo player : playersList) {
+            boolean ok = true;
             for (int i = 0; i < 16; i++) {
-                if (playerListLabel[i].getText().equals(player.getUsername() + "\n"))
+                if (playerListLabel[i].getText().equals(player.getUsername() + "\n")) {
+                    ok = false;
                     if (player.isReady())
                         playerListLabel[i].setForeground(Color.GREEN);
                     else playerListLabel[i].setForeground(Color.BLACK);
+                }
+            }
+            if (ok) {
+                playerListLabel[contor].setText(player.getUsername());
+                playerListLabel[contor].setForeground(Color.BLACK);
+                contor++;
             }
         }
+    }
+
+    public void refreshLobby() {
+        new Thread(() -> {
+            while (client.getSocket().isConnected()) {
+                client.listenForMessage();
+                getListOfPlayers();
+            }
+        }).start();
     }
 }
