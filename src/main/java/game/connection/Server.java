@@ -21,6 +21,8 @@ public class Server {
 
                 Thread thread = new Thread(clientHandler);
                 thread.start();
+
+//ceasdadsasd
             }
         } catch (IOException e) {
             System.out.println("S-a intrerupt conexiunea catre server");
